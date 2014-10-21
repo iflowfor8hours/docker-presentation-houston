@@ -1,0 +1,70 @@
+Who are we?
+
+Matt Urbanski, 
+	Former linux admin and engineer
+	Programmer
+	Interested in automation puppet/chef
+	Found devops community
+	Agile development at TW
+	Now called devops somehow
+
+What are we talking about
+
+	Title of talk is about minimizing Platform Uncertainty
+
+Platform Uncertainty
+	Prod, qa, and dev are different
+	Contention for resources between dev and test and qe. 
+
+	Consistent environments
+	Consistent, well contained testing endpoints
+	Separation of concerns
+
+What do we gain?
+
+	Enabling devlopers to build test and deploy to safe and consistent environments that are closer to production.
+	Enabling testers to run integration tests on specific combinations of software components without blocking other developers or testers. 
+	Easy testable low-risk upgrades, in an blue green style, for *free*. 
+
+What is docker?
+	Live demo on docker, jenkins, build the image in advance. Or a toy app with sinatra or flask or something.
+
+	Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications. Consisting of Docker Engine, a portable, lightweight runtime and packaging tool, and Docker Hub, a cloud service for sharing applications and automating workflows, Docker enables apps to be quickly assembled from components and eliminates the friction between development, QA, and production environments. As a result, IT can ship faster and run the same app, unchanged, on laptops, data center VMs, and any cloud. 
+
+How does it enable Developers?
+	Portability, build once, dockerize, distribute
+	composibility, use a container for that external resource
+	Dependency management
+
+What can we do with it?
+	Composibility, show docker container with flaskr app, organized repo with storage offloaded
+	Run the flaskr tests then promote the container
+	Flow of a CD Pipeline made of containers,
+
+Where do we want to be in the future? 
+	Nirvana looks like being able promote a container from dev to prod. Continous delivery with containers...
+
+Story arc:
+	Minimizing platform uncertainty with docker
+
+Microwave cookbook analogy to docker.
+
+One implementation:
+	Docker installed on a group of VMs or Physical machines.
+	Jenkins agent installed on these nodes with a number of executors matching the number of procs or threads in the box.
+	Slave base images and application level configurations are config managed.
+		Remember to explain why, so that teams can make modifications to libraries, frameworks, and runtimes installed on these as they see fit. 
+	Slave images are uploaded to a Docker repository
+	Jobs are tagged with appropriate slave image. 
+	Jobs are dispatched to the slave nodes to run inside containers and destroyed upon completion or after some metric is reached (keep last 10 builds?).
+
+Advantages: 
+	The exact same artifact (container) can run on your box in an instant using the same command (horray for copy-pasta from build output!) for troubleshooting. 
+
+Drawbacks:
+	Implementation is laid bare, there are no abstractions to make this easier to deal with for users unfamiliar with containers.
+		This is a huge problem, containers introduce initially difficult concepts that distract from the problem one is trying to solve.
+	Problem of managing different module/cookbook/playbook versions still exists.
+
+Solution: 
+	Pluginize or introduce wrappers to hide some of the complexity. 

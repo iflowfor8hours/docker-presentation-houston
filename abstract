@@ -1,0 +1,8 @@
+Rolf, 
+I spoke with Bill yesterday and we banged out a rough draft of what we want to talk about. Here is the short abstract. 
+
+Abstract: Minimizing platform uncertainty with Docker
+Deploying software successfully and predictibly requires a level of certainty and consistency in the underlying operating system and configuration. In order for developers, testers, and operations people to perform their jobs effectively, platforms as close as possible to production need to be available for testing and tuning at every opportunity to all levels in a development organization. In this presentation we seek to highlight how we have used docker to enable teams to move faster and manage compelxity in their infrastracture, freeing them up to try new things with fewer consequences and a higher level of certainty.
+
+Bio: 
+Matt Urbanski made the move from full time sysadmin to developer and is now wedged firmly in the dubiously named world of devops. He currently works for ThoughtWorks as a devops consultant, helping organizations large and small get their deployments in line by developing tools and processes that make releases less painful. Working on platforms and automting everything to develop the simplest possible self service infrastructure and tools is his passion. He is a strong proponent of continuous delivery and open source software.
