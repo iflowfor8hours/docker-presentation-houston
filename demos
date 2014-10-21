@@ -1,0 +1,18 @@
+Jenkins demo:
+
+build a dockerized jenkins server
+Talk about dockerized jenkins slave infrastructure (for npm vs ruby vs java build envs)
+using tagged instances of slaves, different versions of python/ruby supporting libraries
+Build environments can be whatever you want only have what is necessary for that specific build, and cleanup afterwards
+more efficient use of resources. Wide variety of slvae configurations on a small number of machines. 
+Test upgrades of deployments, plugins, deps, can move the actual workspace and run it and roll back if failure 
+
+
+App deployment demo: 
+
+Create a new container with app server on it
+make a change to the app
+do an a/b deploy
+with linked docker container
+Show volume export of mongo container? 
+

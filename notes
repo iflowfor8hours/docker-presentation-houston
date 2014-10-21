@@ -8,6 +8,8 @@ Matt Urbanski,
 	Agile development at TW
 	Now called devops somehow
 
+	Operations kind of guy whats so special about this from an operational side 
+
 What are we talking about
 
 	Title of talk is about minimizing Platform Uncertainty
@@ -23,13 +25,40 @@ Platform Uncertainty
 What do we gain?
 
 	Enabling devlopers to build test and deploy to safe and consistent environments that are closer to production.
+
 	Enabling testers to run integration tests on specific combinations of software components without blocking other developers or testers. 
 	Easy testable low-risk upgrades, in an blue green style, for *free*. 
 
+	Dependency management is pushed on devs, nokogiri deps anyone?
+
+	ops can setup consistent 'framework' with logging, monitoring, endpoints setup.
+
 What is docker?
+
+	Microsoft recently announced support
+	RHEL 7 Support
+	Amazon Support
+
+	Built out of dotCloud with no financial support. 
+	Fastest growing project on github.
+
 	Live demo on docker, jenkins, build the image in advance. Or a toy app with sinatra or flask or something.
 
+	Extremely lightweight and fast VM. 
+
 	Docker is an open platform for developers and sysadmins to build, ship, and run distributed applications. Consisting of Docker Engine, a portable, lightweight runtime and packaging tool, and Docker Hub, a cloud service for sharing applications and automating workflows, Docker enables apps to be quickly assembled from components and eliminates the friction between development, QA, and production environments. As a result, IT can ship faster and run the same app, unchanged, on laptops, data center VMs, and any cloud. 
+
+What problems does it solve?
+	Show a complex infrastructure. 
+
+	Machines are portable. Apps are now truly isolated.
+		No longer tied between specific infrastructure
+		Operations people don't need to know how apps work, what stacks they're running on, etc.
+		Exposed ports, volume containers, and configuration endpoints are the only things the operations people need to know about
+
+	Dev arch advantages:
+		Personal cloud that starts fast, full app server stack with caching, proxying, and persistance.
+		Full isolation from other teams dependency management. Full control of dependencies. 
 
 How does it enable Developers?
 	Portability, build once, dockerize, distribute
