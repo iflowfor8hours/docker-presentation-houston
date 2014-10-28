@@ -25,5 +25,4 @@ Then we use a volume image and the `docker-volumes` tool to fill that container 
 
 This starts the `jenkins-master` container, and mounts the `/var/jenkins_data` directory before starting the jenkins server process. The jenkins server process initializes with the data we mounted from the other container. This technique creates a physical seperation of data and compute processes. This pattern comes in very handy in more complex or scaled infrastructures. This also exports them to the host through localhost and to any other containers if configured to do so. In our case, we specified that ports 8080 and 50000 to be open to the world, so this exposes them to linked containers and the host machine the container is running on. 
 
-`docker run -it --rm --name=jenkins-slave -h jenkins-slave-1 --link jenkins-master:jenkins-master -e JENKINS_MASTER=http://jenkins-master:8080 maestrodev/build-agent
-
+`docker run -it --rm --name=jenkins-slave -h jenkins-slave-1 --link jenkins-master:jenkins-master -e JENKINS_MASTER=http://jenkins-master:8080 maestrodev/build-agent`
