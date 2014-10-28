@@ -1,4 +1,6 @@
-# Build agent `maestrodev/build-agent`
+# Build agent `iflowfor8hours/build-agent`
+
+https://github.com/iflowfor8hours/docker-images
 
 A preinstalled CentOS build agent running Jenkins swarm slave with typical build software, installed using Puppet.
 
@@ -8,6 +10,7 @@ A preinstalled CentOS build agent running Jenkins swarm slave with typical build
 * RVM (with 1.9, 2.0, 2.1, JRuby)
 * Git
 * Svn
+* Docker
 
 ## Running
 

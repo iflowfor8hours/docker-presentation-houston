@@ -60,8 +60,20 @@ What problems does it solve?
 		Personal cloud that starts fast, full app server stack with caching, proxying, and persistance.
 		Full isolation from other teams dependency management. Full control of dependencies. 
 
+  Isolated releases are defined as
+    Software artifact with metadata
+    Configuration artifact with metadata
+    Installation, Upgrade, and Configuration documentation
+
+    With every release you should be able to 
+      Build a new environment with specific versions
+      upgrade an existing environment
+      and promote through logical environments (dev, qa, prod)
+
+
 How does it enable Developers?
 	Portability, build once, dockerize, distribute
+    Portability, repeatability, predicitible
 	composibility, use a container for that external resource
 	Dependency management
 

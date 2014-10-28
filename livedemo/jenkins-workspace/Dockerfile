@@ -1,3 +1,2 @@
-FROM base
-VOLUME /var/jenkins_home
+FROM iflowfor8hours/jenkins-master-data-volume
 CMD /bin/bash
