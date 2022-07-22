@@ -74,8 +74,8 @@ GEM
     rspec-puppet (0.1.6)
       rspec
     thor (0.19.1)
-    thread_safe (0.3.4)
-    tzinfo (1.2.1)
+    thread_safe (0.3.6)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
 
 PLATFORMS
